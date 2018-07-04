@@ -8,7 +8,6 @@ import { StoreModule } from '@ngrx/store';
 import { Routing } from './app.routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 
 import { AuthenticationGuardService } from './services/authentication-guard.service';
@@ -21,7 +20,6 @@ import { reducers } from './store/app.states';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
     HomeComponent
   ],
   imports: [

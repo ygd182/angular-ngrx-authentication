@@ -23,23 +23,6 @@ export const initialState: State = {
 
 export function reducer(state = initialState, action: All): State {
   switch (action.type) {
-    /*case AuthenticationActionTypes.REGISTER_SUCCESS: {
-      return {
-        ...state,
-        isAuthenticated: true,
-        user: {
-          token: action.payload.token,
-          email: action.payload.email
-        },
-        errorMessage: null
-      };
-    }
-    case AuthenticationActionTypes.REGISTER_FAILURE: {
-      return {
-        ...state,
-        errorMessage: 'The email is already in use.'
-      };
-    }*/
     case AuthenticationActionTypes.LOGIN_SUCCESS: {
       return {
         ...state,

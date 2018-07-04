@@ -9,7 +9,6 @@ import { map, switchMap, catchError, tap } from 'rxjs/operators';
 import { AuthenticationService } from '../../services/authentication.service';
 import {
   AuthenticationActionTypes,
- /* Register, RegisterSuccess, RegisterFailure,*/
   Login, LoginSuccess, LoginFailure,Logout
 } from '../actions/authentication.actions';
 
@@ -22,34 +21,6 @@ export class AuthenticationEffects {
     private authenticationService: AuthenticationService,
     private router: Router,
   ) {}
-
-  /* @Effect()
-  Register: Observable<any> = this.actions
-    .ofType(AuthenticationActionTypes.REGISTER)
-    .map((action: Register) => action.payload)
-    .switchMap(payload => {
-      return this.authenticationService.signUp(payload.email, payload.password)
-        .map((user) => {
-          return new RegisterSuccess({token: user.token, email: payload.email});
-        })
-        .catchError((error) => {
-          return Observable.of(new RegisterFailure({ error: error }));
-        });
-    });
-
-  @Effect({ dispatch: false })
-  RegisterSuccess: Observable<any> = this.actions.pipe(
-    ofType(AuthenticationActionTypes.REGISTER_SUCCESS),
-    tap((user) => {
-      localStorage.setItem('token', user.payload.token);
-      this.router.navigateByUrl('/');
-    })
-  );
-
-  @Effect({ dispatch: false })
-  RegisterFailure: Observable<any> = this.actions.pipe(
-    ofType(AuthenticationActionTypes.REGISTER_FAILURE)
-  );*/
 
   @Effect()
   Login: Observable<any> = this.actions
