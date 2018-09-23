@@ -1,3 +1,4 @@
+//authentication.services.ts
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { User } from './../models/user';
@@ -27,7 +28,7 @@ export class AuthenticationService {
       if (email === this.testUser.email && password === this.testUser.password) {
         observer.next({email: this.testUser.email, token: this.testUser.token});
       } else {
-        observer.error("401");
+        observer.error({error: 'invalid credentials.'});
       }
       observer.complete();
     });

@@ -1,10 +1,11 @@
+//home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { User } from './../models/user';
-import { AppState, selectAuthState } from './../store/app.states';
-import { Logout } from './../store/actions/authentication.actions';
+import { User } from './../../models/user';
+import { AppState, selectAuthenticationState } from './../../store/app.states';
+import { Logout } from './../../store/actions/authentication.actions';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   isAuthenticated: boolean = false; 
 
   constructor(private store: Store<AppState>) {
-     this.getState = this.store.select(selectAuthState);
+     this.getState = this.store.select(selectAuthenticationState);
   }
 
   ngOnInit() {

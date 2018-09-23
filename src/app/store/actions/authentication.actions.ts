@@ -27,7 +27,7 @@ export class Logout implements Action {
   readonly type = AuthenticationActionTypes.LOGOUT;
 }
 
-export type All =
+export type AuthenticationActions =
   | Login
   | LoginSuccess
   | LoginFailure

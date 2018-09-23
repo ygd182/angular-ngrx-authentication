@@ -66,5 +66,4 @@ export class AuthenticationEffects {
       this.router.navigateByUrl('/login');
     })
   );
-
 }

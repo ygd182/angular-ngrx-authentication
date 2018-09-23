@@ -1,3 +1,4 @@
+//authentication-guard.service.ts
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
 import { AuthenticationService } from './authentication.service';
@@ -14,7 +15,6 @@ export class AuthenticationGuardService {
 
   canActivate(): boolean {
     const isLoggedIn = this.authenticationService.isLoggedIn();
-    console.log('logueado', isLoggedIn);
     if (!isLoggedIn) {
       this.router.navigateByUrl('/login');
       return false;

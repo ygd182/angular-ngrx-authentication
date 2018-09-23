@@ -1,3 +1,4 @@
+//app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,8 +8,8 @@ import { StoreModule } from '@ngrx/store';
 
 import { Routing } from './app.routes';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { AuthenticationGuardService } from './services/authentication-guard.service';
 import { AuthenticationService } from './services/authentication.service';

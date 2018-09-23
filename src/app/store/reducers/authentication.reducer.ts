@@ -1,6 +1,6 @@
-//authentication.reducers.ts
+//authentication.reducer.ts
 import { User } from '../../models/user';
-import { AuthenticationActionTypes, All } from '../actions/authentication.actions';
+import { AuthenticationActionTypes, AuthenticationActions } from '../actions/authentication.actions';
 
 export interface State {
   // is the user authenticated?
@@ -21,7 +21,7 @@ export const initialState: State = {
   errorMessage: null
 };
 
-export function reducer(state = initialState, action: All): State {
+export function reducer(state = initialState, action: AuthenticationActions): State {
   switch (action.type) {
     case AuthenticationActionTypes.LOGIN_SUCCESS: {
       return {
